@@ -1,0 +1,81 @@
+/* Cinematic hero v2. Photo-based 2.5D; isolated from booking/admin styles. */
+.cinema-hero { min-height: min(100svh,1000px); background:var(--lux-onyx,#0f0d0b); color:#fff; align-items:flex-end; }
+.cinema-scene { position:absolute; inset:0; z-index:-3; overflow:hidden; will-change:transform; }
+.cinema-poster { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center; transform:scale(1.05); filter:saturate(1.02) contrast(1.03); }
+.cinema-poster--night { opacity:0; transition:opacity 1.05s cubic-bezier(.16,1,.3,1); }
+.cinema-hero.is-night .cinema-poster--night { opacity:1; }
+.cinema-video {
+  position:absolute; inset:0; width:100%; height:100%;
+  object-fit:cover; object-position:center;
+  opacity:0; pointer-events:none;
+  transition:opacity 1.05s cubic-bezier(.16,1,.3,1);
+}
+.cinema-hero.is-video:not(.is-night) .cinema-video:not(.cinema-video--night) { opacity:1; }
+.cinema-hero.is-video.is-night .cinema-video--night { opacity:1; }
+.cinema-atmosphere { position:absolute; inset:0; width:100%; height:100%; opacity:0; transition:opacity .6s ease; }
+.cinema-shade { position:absolute; inset:0; z-index:-1; background:linear-gradient(90deg,rgba(15,13,11,.82) 0%,rgba(15,13,11,.42) 38%,rgba(15,13,11,.08) 73%),linear-gradient(180deg,rgba(15,13,11,.38),transparent 35%,rgba(15,13,11,.28) 73%,rgba(15,13,11,.82)); pointer-events:none; }
+.cinema-hero.is-night .cinema-shade { background:linear-gradient(90deg,rgba(8,6,5,.78),rgba(8,6,5,.08) 75%),linear-gradient(0deg,rgba(8,6,5,.7),transparent 70%); }
+.cinema-hero::before { content:""; position:absolute; inset:0; z-index:-1; pointer-events:none; box-shadow:inset 0 0 140px rgba(15,13,11,.45); }
+.cinema-hero::after { content:""; position:absolute; inset:0 0 auto; height:160px; z-index:2; pointer-events:none; background:linear-gradient(180deg,rgba(15,13,11,.55),transparent); }
+.cinema-topline { z-index:3; position:absolute; top:112px; left:50%; transform:translateX(-50%); display:flex; align-items:center; justify-content:flex-end; gap:16px; }
+.cinema-setting { display:flex; border:1px solid rgba(255,247,232,.32); background:rgba(15,13,11,.28); }
+.cinema-setting button { display:flex; align-items:center; justify-content:center; gap:8px; min-height:44px; padding:0 16px; color:#fff; font-size:11px; letter-spacing:.16em; text-transform:uppercase; cursor:pointer; transition:background .18s cubic-bezier(.16,1,.3,1),color .18s cubic-bezier(.16,1,.3,1); }
+.cinema-setting button[aria-pressed=true] { background:#f4efe7; color:#0f0d0b; }
+.cinema-setting .cinema-motion { min-width:44px; padding:0 12px; letter-spacing:0; }
+.cinema-content { position:relative; display:flex; align-items:end; padding-top:222px; padding-bottom:120px; width:100%; }
+.cinema-copy { max-width:720px; }
+.cinema-copy h1 { font-family:var(--lux-font-display); color:#fffdf7; font-size:clamp(64px,6.6vw,104px); letter-spacing:-.03em; line-height:1.02; font-weight:300; margin:0; text-wrap:balance; text-shadow:0 18px 48px rgba(15,13,11,.35); }
+.cinema-copy h1 em { color:#e8d3a4; font-weight:300; font-style:italic; }
+.cinema-actions { display:flex; align-items:center; flex-wrap:wrap; gap:28px; margin-top:34px; }
+.cinema-link { color:#fff7eb; min-height:44px; }
+.cinema-motion { display:flex; align-items:center; gap:10px; min-height:44px; color:#f0e8d9; font-size:12px; cursor:pointer; }
+.cinema-motion:disabled { opacity:.75; cursor:default; }
+.cinema-hero button:focus-visible { outline:2px solid #fff4d8; outline-offset:4px; }
+.cinema-room-dialog { width:min(780px,calc(100vw - 32px)); max-width:780px !important; max-height:calc(100dvh - 32px); overflow-y:auto; padding:28px; background:#fbf8f1; border:1px solid #d1c4ab; color:#1c1917; gap:16px; }
+.cinema-room-dialog [data-slot=dialog-title] { font:400 38px/1.2 var(--lux-font-display); }
+.cinema-room-dialog [data-slot=dialog-description] { color:#645c51; }
+.cinema-room-dialog > button:last-child { min-width:44px; min-height:44px; display:grid; place-items:center; top:8px; right:8px; }
+.cinema-modal-kicker { display:flex; align-items:center; gap:8px; color:#806234; letter-spacing:.15em; font-size:10px; }
+.cinema-room-select { display:flex; gap:16px; align-items:center; font-size:14px; }
+.cinema-room-select select { flex:1; min-width:0; background:#fffdf8; color:#24362e; min-height:44px; padding:0 12px; border:1px solid #bfb19a; border-radius:4px; }
+.cinema-modal-media { height:320px; overflow:hidden; border-radius:6px; background:#e3ddcf; }
+.cinema-modal-summary { display:grid; gap:4px; font-size:15px; }
+.cinema-modal-summary span { color:#665b49; font-size:13px; }
+.cinema-modal-actions { display:flex; align-items:center; flex-wrap:wrap; gap:16px; }
+.cinema-modal-actions .lux-btn { background:#1c1917; color:white; border-radius:2px; gap:12px; font-size:12px; padding:12px 18px; }
+.cinema-modal-actions p { font-size:12px; color:#665b49; flex:1; min-width:160px; }
+@media(min-width:901px) and (prefers-reduced-motion:no-preference) {
+ .cinema-copy { animation:cinema-arrive .7s cubic-bezier(.16,1,.3,1) both; }
+ @keyframes cinema-arrive { from{opacity:0;transform:translate3d(0,12px,0)}to{opacity:1;transform:none} }
+ @supports (animation-timeline: scroll()) {
+  .cinema-scene { animation:cinema-parallax linear both; animation-timeline:scroll(root); animation-range:0 90vh; }
+  @keyframes cinema-parallax { to { transform:translate3d(0,16vh,0); } }
+ }
+}
+@media(max-width:1100px) {
+ .cinema-copy h1 { font-size:72px; }
+ .cinema-actions { gap:20px; }
+}
+@media(max-width:900px) {
+ .cinema-hero { min-height:900px; }
+ .cinema-topline { top:102px; justify-content:flex-end; }
+ .cinema-content { padding-top:208px; padding-bottom:100px; }
+ .cinema-copy { max-width:580px; }
+ .cinema-copy h1 { font-size:clamp(60px,10vw,90px); }
+ .cinema-shade { background:linear-gradient(90deg,rgba(15,13,11,.86),rgba(15,13,11,.38)),linear-gradient(0deg,rgba(15,13,11,.82),transparent 80%); }
+}
+@media(max-width:600px) {
+ .cinema-hero { min-height:860px; }
+ .cinema-topline { top:102px; }
+ .cinema-setting { padding:3px; }
+ .cinema-setting button { font-size:12px; padding:0 12px; gap:7px; }
+ .cinema-content { padding-top:202px; padding-bottom:88px; }
+ .cinema-copy h1 { font-size:clamp(56px,15vw,76px); letter-spacing:-.05em; line-height:1.06; }
+ .cinema-actions { display:flex; flex-wrap:wrap; gap:18px 28px; margin-top:26px; }
+ .cinema-motion { font-size:11px; }
+ .cinema-poster { object-position:60% center; }
+}
+@media(prefers-reduced-motion:reduce) {
+ .cinema-hero *:not(video), .cinema-room-dialog * { animation:none !important; transition:none !important; }
+ .cinema-video { display:none; }
+}

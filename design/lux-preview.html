@@ -1,0 +1,435 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Sao Mai Hotel &amp; Residences — Một khoảng trời riêng</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../src/styles/luxury.css" />
+<style>
+  /* Reset tối thiểu, tương đương phần Preflight của Tailwind trong app thật */
+  *, *::before, *::after { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body { background: var(--lux-ivory); }
+  h1, h2, h3, h4, p, figure { margin: 0; }
+  button { font-family: inherit; }
+</style>
+</head>
+<body class="lux">
+<a class="lux-skip" href="#main">Bỏ qua tới nội dung chính</a>
+
+<!-- ============================ HEADER ============================ -->
+<header class="lux-header lux-header--onDark">
+  <div class="lux-shell lux-shell--wide lux-header__inner">
+    <button class="lux-brand" type="button">
+      <span class="lux-brand__mark">SM</span>
+      <span>
+        <span class="lux-brand__name">Sao Mai</span><br />
+        <span class="lux-brand__tag">Hotel &amp; Residences</span>
+      </span>
+    </button>
+
+    <nav class="lux-nav" aria-label="Điều hướng chính">
+      <button class="lux-nav__link" type="button" aria-current="page">Residences</button>
+      <button class="lux-nav__link" type="button">Trải nghiệm</button>
+      <button class="lux-nav__link" type="button">Ở lâu</button>
+      <button class="lux-nav__link" type="button">Liên hệ</button>
+    </nav>
+
+    <div class="lux-header__actions">
+      <button class="lux-btn lux-btn--outline lux-btn--sm lux-btn--hideSm" type="button">VI / EN</button>
+      <button class="lux-btn lux-btn--gold lux-btn--sm" type="button">Đặt residences</button>
+      <button class="lux-burger" type="button" aria-label="Mở menu">
+        <svg width="18" height="12" viewBox="0 0 18 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M0 1h18M0 6h18M0 11h18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+<!-- ============================= HERO ============================= -->
+<section class="lux-hero">
+  <div class="lux-hero__media"><img src="../public/media/hero-resort.jpg" alt="Hồ bơi vô cực của Sao Mai Hotel lúc hoàng hôn" /></div>
+  <div class="lux-hero__scrim"></div>
+
+  <div class="lux-shell lux-shell--wide lux-hero__content">
+    <p class="lux-eyebrow lux-eyebrow--light">Một kỳ nghỉ. Chỉ dành cho bạn.</p>
+    <h1 class="lux-display lux-hero__title">Một khoảng<br /><em>trời riêng.</em></h1>
+    <p class="lux-hero__lede">
+      Sao Mai không phải nơi nghỉ đông người. 13 residences — mỗi căn là một khoảng trời riêng.
+    </p>
+    <div class="lux-hero__actions">
+      <button class="lux-btn lux-btn--gold" type="button">Đặt residences</button>
+      <button class="lux-btn lux-btn--light" type="button">Khám phá 13 căn</button>
+    </div>
+
+    <div class="lux-hero__meta">
+      <div class="lux-hero__stat"><b>13</b><span>Residences</span></div>
+      <div class="lux-hero__stat"><b>12</b><span>Vị trí bàn tối</span></div>
+      <div class="lux-hero__stat"><b>24/7</b><span>Concierge</span></div>
+    </div>
+  </div>
+
+  <div class="lux-scrollcue"><span>Cuộn xuống</span><i></i></div>
+</section>
+
+<!-- ====================== THANH ĐẶT PHÒNG ======================= -->
+<div class="lux-bookbar-wrap">
+  <div class="lux-shell lux-shell--wide">
+    <form class="lux-bookbar">
+      <div class="lux-bookbar__field">
+        <label class="lux-field__label" for="ci">Nhận phòng</label>
+        <button class="lux-field__control" id="ci" type="button">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 11h18"/></svg>
+          T6, 28/08/2026
+        </button>
+      </div>
+      <div class="lux-bookbar__field">
+        <label class="lux-field__label" for="co">Trả phòng</label>
+        <button class="lux-field__control" id="co" type="button">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 11h18"/></svg>
+          CN, 30/08/2026
+        </button>
+      </div>
+      <div class="lux-bookbar__field">
+        <span class="lux-field__label">Số khách</span>
+        <div class="lux-stepper">
+          <button type="button" aria-label="Giảm số khách">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/></svg>
+          </button>
+          <output>2 khách</output>
+          <button type="button" aria-label="Tăng số khách">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+          </button>
+        </div>
+      </div>
+      <div class="lux-bookbar__cta">
+        <button class="lux-btn lux-btn--ink lux-btn--block" type="submit">
+          <svg class="lux-btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+          Tìm phòng
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- ========================= PHÒNG & SUITE ======================== -->
+<section class="lux-section">
+  <div class="lux-shell lux-shell--wide">
+    <div class="lux-section__bar">
+      <div class="lux-section__head lux-reveal is-in">
+        <p class="lux-eyebrow">Lưu trú</p>
+        <h2 class="lux-title">Phòng &amp; Suite</h2>
+        <p class="lux-lede">13 residences. Check-in riêng. Concierge xác nhận sau khi chọn ngày.</p>
+      </div>
+      <button class="lux-linkline" type="button">Xem tất cả hạng phòng
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </button>
+    </div>
+
+    <div class="lux-rooms">
+      <!-- Card 1 -->
+      <article class="lux-room lux-reveal is-in">
+        <div class="lux-room__media">
+          <img src="../public/media/room-deluxe.jpg" alt="Ocean Suite hướng biển" />
+          <span class="lux-flag"><i></i> Còn 6 phòng</span>
+        </div>
+        <div class="lux-room__body">
+          <div class="lux-room__head">
+            <div>
+              <h3 class="lux-room__name">Ocean Suite</h3>
+              <span class="lux-room__cap">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="9" cy="8" r="3.2"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0M17 11a3 3 0 1 0-2-5.2M21.5 20a5.5 5.5 0 0 0-4-5.3"/></svg>
+                Tối đa 2 khách · 38 m²
+              </span>
+            </div>
+            <div class="lux-price">
+              <span class="lux-price__label">Chỉ từ</span>
+              <span class="lux-price__value">1.850.000₫</span>
+              <span class="lux-price__unit">/ đêm</span>
+            </div>
+          </div>
+          <p class="lux-room__desc">Ban công riêng nhìn thẳng ra vịnh, giường King lông vũ, bồn tắm đá cẩm thạch.</p>
+          <div class="lux-chips">
+            <span class="lux-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M5 12.5a10 10 0 0 1 14 0M8.5 16a5 5 0 0 1 7 0"/><circle cx="12" cy="19.5" r="1"/></svg> Wifi 1Gbps</span>
+            <span class="lux-chip">Ăn sáng</span>
+            <span class="lux-chip">Ban công</span>
+            <span class="lux-chip">+4</span>
+          </div>
+          <div class="lux-room__foot">
+            <span class="lux-room__total">2 đêm <b>3.700.000₫</b></span>
+            <button class="lux-btn lux-btn--ink lux-btn--sm" type="button">Đặt phòng</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="lux-room lux-reveal is-in lux-reveal--d1">
+        <div class="lux-room__media">
+          <img src="../public/media/room-suite.jpg" alt="Panorama Suite" />
+          <span class="lux-flag"><i></i> Còn 2 phòng</span>
+        </div>
+        <div class="lux-room__body">
+          <div class="lux-room__head">
+            <div>
+              <h3 class="lux-room__name">Horizon Suite</h3>
+              <span class="lux-room__cap">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="9" cy="8" r="3.2"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0M17 11a3 3 0 1 0-2-5.2M21.5 20a5.5 5.5 0 0 0-4-5.3"/></svg>
+                Tối đa 4 khách · 72 m²
+              </span>
+            </div>
+            <div class="lux-price">
+              <span class="lux-price__label">Chỉ từ</span>
+              <span class="lux-price__value">3.400.000₫</span>
+              <span class="lux-price__unit">/ đêm</span>
+            </div>
+          </div>
+          <p class="lux-room__desc">Phòng khách riêng, cửa kính kịch trần hai mặt, quản gia phục vụ 24/7.</p>
+          <div class="lux-chips">
+            <span class="lux-chip">Quản gia riêng</span>
+            <span class="lux-chip">Đưa đón sân bay</span>
+            <span class="lux-chip">+6</span>
+          </div>
+          <div class="lux-room__foot">
+            <span class="lux-room__total">2 đêm <b>6.800.000₫</b></span>
+            <button class="lux-btn lux-btn--ink lux-btn--sm" type="button">Đặt phòng</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 3 (hết phòng) -->
+      <article class="lux-room lux-reveal is-in lux-reveal--d2">
+        <div class="lux-room__media">
+          <img src="../public/media/room-superior.jpg" alt="Garden Pavilion" />
+          <span class="lux-flag lux-flag--out"><i></i> Hết phòng</span>
+        </div>
+        <div class="lux-room__body">
+          <div class="lux-room__head">
+            <div>
+              <h3 class="lux-room__name">Garden Pavilion</h3>
+              <span class="lux-room__cap">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="9" cy="8" r="3.2"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0M17 11a3 3 0 1 0-2-5.2M21.5 20a5.5 5.5 0 0 0-4-5.3"/></svg>
+                Tối đa 3 khách · 32 m²
+              </span>
+            </div>
+            <div class="lux-price">
+              <span class="lux-price__label">Chỉ từ</span>
+              <span class="lux-price__value">1.250.000₫</span>
+              <span class="lux-price__unit">/ đêm</span>
+            </div>
+          </div>
+          <p class="lux-room__desc">Hai giường đơn nhìn ra vườn nhiệt đới, không gian yên tĩnh cho gia đình.</p>
+          <div class="lux-chips">
+            <span class="lux-chip">Hướng vườn</span>
+            <span class="lux-chip">Bàn làm việc</span>
+            <span class="lux-chip">+3</span>
+          </div>
+          <div class="lux-room__foot">
+            <span class="lux-room__total">Ngày bạn chọn <b>đã kín phòng</b></span>
+            <button class="lux-btn lux-btn--outline lux-btn--sm" type="button">Nhận thông báo</button>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ========================= TIỆN NGHI ========================== -->
+<section class="lux-section lux-section--tight lux-section--sand">
+  <div class="lux-shell lux-shell--wide">
+    <div class="lux-amenities">
+      <div class="lux-amenity">
+        <span class="lux-amenity__icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 18c2.5 0 2.5-1.5 5-1.5s2.5 1.5 5 1.5 2.5-1.5 5-1.5 2.5 1.5 5 1.5"/><path d="M2 22c2.5 0 2.5-1.5 5-1.5s2.5 1.5 5 1.5 2.5-1.5 5-1.5 2.5 1.5 5 1.5"/><path d="M7 14V4a2 2 0 0 1 4 0M17 14V4a2 2 0 0 0-4 0"/></svg></span>
+        <h3 class="lux-amenity__title">Hồ bơi vô cực</h3>
+        <p class="lux-amenity__desc">Hồ nước mặn 40 m trên tầng thượng, quầy bar nổi phục vụ tới nửa đêm.</p>
+      </div>
+      <div class="lux-amenity">
+        <span class="lux-amenity__icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 21c4-2.5 7-6 7-10a7 7 0 1 0-14 0c0 4 3 7.5 7 10Z"/><path d="M9 11c1.5 1 4.5 1 6 0"/></svg></span>
+        <h3 class="lux-amenity__title">Spa trị liệu</h3>
+        <p class="lux-amenity__desc">6 phòng trị liệu, liệu trình thảo mộc bản địa, phòng xông đá muối.</p>
+      </div>
+      <div class="lux-amenity">
+        <span class="lux-amenity__icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M7 3v8a3 3 0 0 0 6 0V3M10 3v18M17 3c-1.5 2-2 4-2 6s.5 3 2 3v9"/></svg></span>
+        <h3 class="lux-amenity__title">Ẩm thực ánh nến</h3>
+        <p class="lux-amenity__desc">Nhà hàng hải sản bên sóng, bếp trưởng đạt 1 sao khu vực.</p>
+      </div>
+      <div class="lux-amenity">
+        <span class="lux-amenity__icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 17V9.5L12 4l9 5.5V17a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z"/><path d="M9 19v-5h6v5"/></svg></span>
+        <h3 class="lux-amenity__title">Quản gia riêng</h3>
+        <p class="lux-amenity__desc">Một đầu mối lo mọi việc: đưa đón, đặt bàn, tour riêng, giặt là hoả tốc.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================== ẨM THỰC =========================== -->
+<section class="lux-section">
+  <div class="lux-shell lux-shell--wide">
+    <div class="lux-split">
+      <figure class="lux-split__media lux-split__media--tall lux-reveal is-in">
+        <img src="../public/media/dining.jpg" alt="Nhà hàng ánh nến hướng biển" />
+      </figure>
+      <div class="lux-split__body lux-reveal is-in lux-reveal--d1">
+        <p class="lux-eyebrow">Trải nghiệm</p>
+        <h2 class="lux-title">Bữa tối bên sóng,<br />chỉ dành cho 12 bàn</h2>
+        <p class="lux-lede">
+          Thực đơn đổi theo mẻ cá trong ngày. Bàn cạnh cửa kính được giữ riêng cho khách lưu trú —
+          đặt bàn ngay khi xác nhận phòng để chọn khung giờ hoàng hôn.
+        </p>
+        <ul class="lux-featlist">
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="m4 12 5 5L20 6"/></svg> Set 5 món theo mùa, kèm rượu vang chọn lọc</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="m4 12 5 5L20 6"/></svg> Bàn riêng trên bãi cát cho dịp kỷ niệm</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="m4 12 5 5L20 6"/></svg> Bếp phục vụ tận phòng 24/7</li>
+        </ul>
+        <div>
+          <button class="lux-btn lux-btn--outline" type="button">Xem thực đơn &amp; đặt bàn</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================== DẢI SỐ LIỆU ========================= -->
+<section class="lux-section lux-section--tight lux-section--dark">
+  <div class="lux-shell lux-shell--wide">
+    <div class="lux-band">
+      <div class="lux-band__item"><span class="lux-band__value">4.9</span><span class="lux-band__label">Điểm hài lòng</span></div>
+      <div class="lux-band__item"><span class="lux-band__value">96%</span><span class="lux-band__label">Khách quay lại</span></div>
+      <div class="lux-band__item"><span class="lux-band__value">5′</span><span class="lux-band__label">Xác nhận phòng</span></div>
+      <div class="lux-band__item"><span class="lux-band__value">0₫</span><span class="lux-band__label">Phí huỷ trước 48h</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================== ĐÁNH GIÁ ========================== -->
+<section class="lux-section">
+  <div class="lux-shell lux-shell--wide">
+    <div class="lux-section__head lux-section__head--center lux-reveal is-in" style="margin-bottom:48px">
+      <p class="lux-eyebrow lux-eyebrow--center">Cảm nhận</p>
+      <h2 class="lux-title">Khách nói gì về Sao Mai</h2>
+    </div>
+    <div class="lux-quotes">
+      <figure class="lux-quote lux-reveal is-in">
+        <div class="lux-stars" aria-label="5 trên 5 sao">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9L12 3Z"/></svg>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9L12 3Z"/></svg>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9L12 3Z"/></svg>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9L12 3Z"/></svg>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9L12 3Z"/></svg>
+        </div>
+        <blockquote class="lux-quote__text">“Đặt phòng mất đúng một phút, lễ tân gọi xác nhận sau 4 phút. Phòng đẹp hơn cả ảnh.”</blockquote>
+        <figcaption class="lux-quote__meta">
+          <span class="lux-avatar">MQ</span>
+          <span><span class="lux-quote__name">Minh Quân</span><br /><span class="lux-quote__role">Lưu trú tháng 7/2026</span></span>
+        </figcaption>
+      </figure>
+
+      <figure class="lux-quote lux-reveal is-in lux-reveal--d1">
+        <div class="lux-stars" aria-label="5 trên 5 sao">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9L12 3Z"/></svg>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9L12 3Z"/></svg>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9L12 3Z"/></svg>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9L12 3Z"/></svg>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9L12 3Z"/></svg>
+        </div>
+        <blockquote class="lux-quote__text">“Ban công nhìn thẳng ra vịnh, bữa sáng dọn tận phòng đúng giờ. Sẽ quay lại.”</blockquote>
+        <figcaption class="lux-quote__meta">
+          <span class="lux-avatar">TH</span>
+          <span><span class="lux-quote__name">Thu Hà</span><br /><span class="lux-quote__role">Kỳ nghỉ gia đình</span></span>
+        </figcaption>
+      </figure>
+
+      <figure class="lux-quote lux-reveal is-in lux-reveal--d2">
+        <div class="lux-stars" aria-label="5 trên 5 sao">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9L12 3Z"/></svg>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9L12 3Z"/></svg>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9L12 3Z"/></svg>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9L12 3Z"/></svg>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" opacity=".3"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9L12 3Z"/></svg>
+        </div>
+        <blockquote class="lux-quote__text">“Quản gia sắp xếp xe sân bay và tour đảo chỉ trong một tin nhắn.”</blockquote>
+        <figcaption class="lux-quote__meta">
+          <span class="lux-avatar">AK</span>
+          <span><span class="lux-quote__name">Anh Khoa</span><br /><span class="lux-quote__role">Công tác kết hợp nghỉ dưỡng</span></span>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ CTA ============================= -->
+<section class="lux-section lux-section--tight">
+  <div class="lux-shell lux-shell--wide">
+    <div class="lux-cta">
+      <img src="../public/media/pool.jpg" alt="" aria-hidden="true" />
+      <div class="lux-cta__inner">
+        <p class="lux-eyebrow lux-eyebrow--light lux-eyebrow--center">Ưu đãi đặt trực tiếp</p>
+        <h2 class="lux-title" style="color:#fff">Giảm 12% + nâng hạng phòng miễn phí</h2>
+        <p class="lux-lede lux-lede--light" style="text-align:center">
+          Áp dụng khi đặt trên website chính thức và lưu trú từ 2 đêm. Huỷ miễn phí trước 48 giờ.
+        </p>
+        <button class="lux-btn lux-btn--gold" type="button">Nhận ưu đãi &amp; đặt phòng</button>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- =========================== FOOTER =========================== -->
+<footer class="lux-footer">
+  <div class="lux-shell lux-shell--wide">
+    <div class="lux-footer__grid">
+      <div>
+        <div class="lux-brand" style="color:#fff">
+          <span class="lux-brand__mark">SM</span>
+          <span><span class="lux-brand__name">Sao Mai</span><br /><span class="lux-brand__tag">Hotel &amp; Residences</span></span>
+        </div>
+        <p style="margin-top:18px;max-width:38ch;font-size:.9375rem;line-height:1.7">
+          Sao Mai không phải nơi nghỉ đông người. 13 residences — mỗi căn là một khoảng trời riêng.
+        </p>
+      </div>
+
+      <div>
+        <h4>Khám phá</h4>
+        <ul class="lux-footer__list">
+          <li><button type="button">Residences</button></li>
+          <li><button type="button">Trải nghiệm</button></li>
+          <li><button type="button">Ở lâu</button></li>
+          <li><button type="button">Concierge</button></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Hỗ trợ</h4>
+        <ul class="lux-footer__list">
+          <li><button type="button">Đặt phòng của tôi</button></li>
+          <li><button type="button">Chính sách huỷ</button></li>
+          <li><button type="button">Câu hỏi thường gặp</button></li>
+          <li><button type="button">Đăng nhập nội bộ</button></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Liên hệ</h4>
+        <ul class="lux-footer__list">
+          <li class="lux-footer__row"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 16.9v2a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 .1 3.2 2 2 0 0 1 2.1 1h2a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L5.5 8.6a16 16 0 0 0 6 6l1-1a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg> Hotline 24/7: 0900 000 000</li>
+          <li class="lux-footer__row"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg> 123 Đường Biển, TP. Hồ Chí Minh</li>
+          <li class="lux-footer__row"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> Nhận phòng 14:00 · Trả phòng 12:00</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="lux-footer__bottom">
+      <span>© 2026 Sao Mai Hotel &amp; Residences. Mọi quyền được bảo lưu.</span>
+      <div class="lux-footer__legal">
+        <button type="button" class="lux-linkline" style="font-size:.75rem">Điều khoản</button>
+        <button type="button" class="lux-linkline" style="font-size:.75rem">Bảo mật</button>
+        <button type="button" class="lux-linkline" style="font-size:.75rem">Quyền của bạn</button>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

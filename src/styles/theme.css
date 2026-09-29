@@ -1,0 +1,302 @@
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --font-size: 16px;
+  --background: #fdfbf7;
+  --foreground: #1c1917;
+  --card: #ffffff;
+  --card-foreground: #1c1917;
+  --popover: #ffffff;
+  --popover-foreground: #1c1917;
+  --primary: #b8860b;
+  --primary-foreground: #ffffff;
+  --secondary: #f6f1e7;
+  --secondary-foreground: #45371c;
+  --muted: #f5efe4;
+  --muted-foreground: #786f66;
+  --accent: #f2e9d7;
+  --accent-foreground: #503d15;
+  --destructive: #d4183d;
+  --destructive-foreground: #ffffff;
+  --border: rgba(184, 134, 11, 0.15);
+  --input: #e5dfd3;
+  --input-background: #ffffff;
+  --switch-background: #d6ccb8;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --ring: #c69234;
+  --chart-1: #c69234;
+  --chart-2: #059669;
+  --chart-3: #d97706;
+  --chart-4: #854d0e;
+  --chart-5: #db2777;
+  --radius: 0.625rem;
+  --sidebar: #14120e;
+  --sidebar-foreground: #c2baa8;
+  --sidebar-primary: #d4af37;
+  --sidebar-primary-foreground: #14120e;
+  --sidebar-accent: #262118;
+  --sidebar-accent-foreground: #f7f1e5;
+  --sidebar-border: #2c251a;
+  --sidebar-ring: #d4af37;
+}
+
+.dark {
+  --background: #12100d;
+  --foreground: #fcfbf9;
+  --card: #191612;
+  --card-foreground: #fcfbf9;
+  --popover: #191612;
+  --popover-foreground: #fcfbf9;
+  --primary: #d4af37;
+  --primary-foreground: #141108;
+  --secondary: #262118;
+  --secondary-foreground: #f7f1e5;
+  --muted: #242018;
+  --muted-foreground: #a69c8c;
+  --accent: #2c251a;
+  --accent-foreground: #fcfbf9;
+  --destructive: oklch(0.396 0.141 25.723);
+  --destructive-foreground: oklch(0.637 0.237 25.331);
+  --border: #2e271c;
+  --input: #2e271c;
+  --ring: #d4af37;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --chart-1: #d4af37;
+  --chart-2: #10b981;
+  --chart-3: #f59e0b;
+  --chart-4: #eab308;
+  --chart-5: #ec4899;
+  --sidebar: #0e0c09;
+  --sidebar-foreground: #d6ccb8;
+  --sidebar-primary: #d4af37;
+  --sidebar-primary-foreground: #0e0c09;
+  --sidebar-accent: #221c13;
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: #262016;
+  --sidebar-ring: #d4af37;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  /**
+  * Default typography styles for HTML elements (h1-h4, p, label, button, input).
+  * These are in @layer base, so Tailwind utility classes (like text-sm, text-lg) automatically override them.
+  */
+
+  html {
+    font-size: var(--font-size);
+  }
+
+  h1 {
+    font-size: var(--text-2xl);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  h2 {
+    font-size: var(--text-xl);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  h3 {
+    font-size: var(--text-lg);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  h4 {
+    font-size: var(--text-base);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  label {
+    font-size: var(--text-base);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  button {
+    font-size: var(--text-base);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  input {
+    font-size: var(--text-base);
+    font-weight: var(--font-weight-normal);
+    line-height: 1.5;
+  }
+}
+
+/* ==========================================================================
+   Hiệu ứng 3D & chuyển động trang trí (thuần CSS, không cần thư viện ngoài)
+   ========================================================================== */
+
+/* Khung nghiêng 3D theo chuột — dùng với component Tilt3D */
+.tilt3d {
+  transition: transform 0.25s ease;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+/* --- Cảnh 3D ở hero (component HeroScene3D) --- */
+.hero3d-scene {
+  perspective: 1200px;
+}
+
+.hero3d-stage {
+  position: relative;
+  transform-style: preserve-3d;
+  animation: hero3d-sway 10s ease-in-out infinite;
+}
+
+@keyframes hero3d-sway {
+  0%, 100% { transform: rotateX(9deg) rotateY(-13deg); }
+  50% { transform: rotateX(13deg) rotateY(-4deg); }
+}
+
+.hero3d-card,
+.hero3d-layer {
+  transform-style: preserve-3d;
+}
+
+/* Chip lơ lửng quanh thẻ — translateZ đặt trong keyframe để không xung đột animation */
+.hero3d-chip {
+  animation: hero3d-chip-float 6s ease-in-out infinite;
+}
+
+.hero3d-chip-slow {
+  animation-duration: 9s;
+  animation-delay: -2s;
+}
+
+@keyframes hero3d-chip-float {
+  0%, 100% { transform: translateZ(70px) translateY(0); }
+  50% { transform: translateZ(70px) translateY(-10px); }
+}
+
+/* --- Quả cầu sáng trôi nổi cho nền (thêm class "orb" vào khối blur sẵn có) --- */
+.orb {
+  animation: orb-drift 12s ease-in-out infinite;
+}
+
+@keyframes orb-drift {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(24px, -18px) scale(1.08); }
+  66% { transform: translate(-16px, 12px) scale(0.96); }
+}
+
+/* --- Chữ gradient chạy màu cho tiêu đề hero --- */
+.text-gradient-animated {
+  background: linear-gradient(90deg, #fbbf24, #f472b6, #60a5fa, #fbbf24);
+  background-size: 300% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: gradient-pan 8s linear infinite;
+}
+
+@keyframes gradient-pan {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* --- Vệt sáng lướt qua khi hover card (thêm class "card-shine") --- */
+.card-shine {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-shine::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 40%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.35), transparent);
+  transform: translateX(-140%) skewX(-18deg);
+  pointer-events: none;
+}
+
+.card-shine:hover::after {
+  animation: shine-sweep 0.9s ease;
+}
+
+@keyframes shine-sweep {
+  from { transform: translateX(-140%) skewX(-18deg); }
+  to { transform: translateX(260%) skewX(-18deg); }
+}
+
+/* Tôn trọng người dùng chọn giảm chuyển động */
+@media (prefers-reduced-motion: reduce) {
+  .tilt3d,
+  .hero3d-stage,
+  .hero3d-chip,
+  .orb,
+  .text-gradient-animated,
+  .card-shine::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* Ẩn thanh cuộn nhưng vẫn cuộn được (Webkit + Firefox) */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

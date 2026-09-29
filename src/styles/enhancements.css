@@ -1,0 +1,49 @@
+/* Additive layer only: remove this import to revert cosmetic changes. */
+.lux { --lux-champagne: #c9ad78; }
+.lux-room { border: 1px solid var(--lux-line); transition: border-color .25s, box-shadow .25s; }
+.lux-room:hover { border-color: #bba779; box-shadow: 0 8px 24px -18px #46362066; }
+.lux-room__head { gap: 12px; flex-wrap: wrap; }
+.lux-price { white-space: nowrap; }
+.lux-hero__scrim { background: linear-gradient(90deg,rgba(12,25,23,.78),rgba(12,25,23,.28) 70%),linear-gradient(0deg,rgba(12,25,23,.45),transparent 55%); }
+.lux-hero__media img { object-position: center; }
+.lux-btn { min-height: 44px; }
+.lux-btn:active:not(:disabled) { transform: translateY(1px); }
+.lux-room__desc { line-height: 1.7; }
+.booking-dialog { max-height: calc(100dvh - 32px); overflow-y: auto; overscroll-behavior: contain; }
+.booking-preview { height: 236px; border: 1px solid #e3ddd2; border-radius: 8px; overflow: hidden; }
+.room-preview { position: relative; width: 100%; height: 100%; min-height: 180px; isolation: isolate; color: #23352f; font-family: var(--lux-font-sans); }
+.lux-room__media .room-preview,
+.lux-stay__media .room-preview { min-height: 0; }
+.room-preview > img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.room-preview__switch { position: absolute; z-index: 3; left: 12px; bottom: 12px; display: flex; padding: 3px; border: 1px solid #ffffff80; border-radius: 6px; background: #faf7f0f5; box-shadow: 0 2px 8px #0001; }
+.room-preview__switch button { display: flex; gap: 6px; align-items: center; justify-content: center; padding: 0 12px; min-height: 44px; font-size: 14px; color: #35443d; border-radius: 4px; cursor: pointer; }
+.room-preview__switch button[aria-pressed=true] { background: #203b33; color: #fff; }
+.room-preview button:focus-visible,.room-scene canvas:focus-visible { outline: 2px solid #8a6d33; outline-offset: -3px; }
+.room-preview__caption { position: absolute; display: flex; align-items: center; gap: 5px; top: 8px; left: 8px; right: 8px; padding: 4px 6px; background: #faf7f0eb; color: #514a3d; font-size: 11px; line-height: 1.35; width: fit-content; max-width: calc(100% - 16px); }
+.room-scene { width: 100%; height: 100%; background: #e8e3d9; }
+.room-scene canvas { display: block; width: 100%; height: 100%; touch-action: none; cursor: grab; }
+.room-scene canvas:active { cursor: grabbing; }
+.room-scene__controls { position: absolute; top: 38px; right: 8px; display: grid; grid-template-columns: 44px 44px; gap: 2px; background: #faf7f0ee; border: 1px solid #cbbfa8; border-radius: 5px; }
+.room-scene__controls button { display: grid; place-items: center; width: 44px; height: 44px; color: #23352f; cursor: pointer; }
+.room-scene__controls button:hover { background: #e6decb; }
+.room-preview__fallback { height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; padding: 40px 24px 76px; text-align: center; background: #f0ebe1; font-size: 14px; }
+.room-preview__fallback button { border: 1px solid #96815b; border-radius: 4px; padding: 10px 14px; min-height: 44px; }
+.lux-room__media:has(.room-scene) > .lux-flag { display: none; }
+@media(max-width: 600px) {
+ .lux-hero__content { padding-top: 132px; }
+ .lux-header__inner { gap: 8px; }
+ .lux-brand__name { font-size: 16px; }
+ .lux-brand__tag { font-size: 9px; letter-spacing: .1em; }
+ .lux-brand { gap: 8px; }
+ .lux-brand__mark { width: 36px; height: 40px; font-size: 14px; }
+ .lux-header__actions { gap: 6px; }
+ .lux-header__actions .lux-btn { padding-inline: 12px; }
+ .booking-dialog { max-width: calc(100vw - 24px); }
+ .room-preview__caption { font-size: 11px; }
+}
+@media(prefers-reduced-motion: reduce) {
+ .lux *, .lux *::before, .lux *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+ .lux-reveal { opacity: 1 !important; transform: none !important; }
+}
+
+.room-scene__controls button:last-child { grid-column: span 2; width: 90px; }

@@ -1,0 +1,13 @@
+/* Chữ của giao diện khách: serif thanh mảnh cho tiêu đề, sans trung tính cho nội dung.
+   Font được tải qua <link> trong index.html để tránh chặn render; ở đây chỉ khai báo
+   stack dự phòng để trang vẫn đẹp khi mạng chậm hoặc offline. */
+:root {
+  --font-display: "Bodoni Moda", "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --font-sans: "Jost", "Segoe UI", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+}
+
+html {
+  font-family: var(--font-sans);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
